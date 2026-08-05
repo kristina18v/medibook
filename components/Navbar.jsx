@@ -1,8 +1,21 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
 
 export default function Navbar() {
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("medibookTheme");
+    document.body.classList.toggle("dark-theme", savedTheme === "dark");
+  }, []);
+
+  function handleThemeToggle() {
+    const nextTheme = !document.body.classList.contains("dark-theme");
+
+    document.body.classList.toggle("dark-theme", nextTheme);
+    localStorage.setItem("medibookTheme", nextTheme ? "dark" : "light");
+  }
+
   return (
     <nav className="navbar">
       <Link href="/" className="logo">
@@ -19,6 +32,14 @@ export default function Navbar() {
       </div>
 
       <div className="auth-links">
+        <button
+          className="theme-toggle"
+          type="button"
+          onClick={handleThemeToggle}
+          aria-label="Toggle dark theme"
+        >
+          Theme
+        </button>
         <Link href="/login">Login</Link>
         <Link href="/register" className="nav-cta">Register</Link>
       </div>
