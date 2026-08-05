@@ -6,7 +6,9 @@ export default function HomePage() {
       <div className="hero-content">
         <p className="eyebrow">Smart healthcare scheduling</p>
 
-        <h1>Book Your Doctor Appointment Online</h1>
+        <h1>
+          Book Your Doctor <span>Appointment Online</span>
+        </h1>
 
         <p>
           Find experienced doctors, browse by specialization, save your
@@ -39,39 +41,45 @@ export default function HomePage() {
         </div>
       </div>
 
-    <section className="hero-panel">
-  <div className="featured-card">
-    <p className="eyebrow">Featured Doctors</p>
+      <section className="hero-panel" aria-label="Featured doctors">
+        <div className="featured-card">
+          <div className="doctor-stack" aria-hidden="true">
+            <span className="doctor-avatar">EC</span>
+            <span className="doctor-avatar">AR</span>
+            <span className="doctor-avatar">MS</span>
+          </div>
 
-    <h2>Find the right doctor for you</h2>
+          <p className="eyebrow">Featured Doctors</p>
 
-    <p>
-      Browse doctors by specialization, compare profiles and book your
-      appointment online in just a few clicks.
-    </p>
+          <h2>Find the right doctor for you</h2>
 
-    <Link href="/doctors" className="button primary">
-      Browse Doctors
-    </Link>
-  </div>
+          <p>
+            Browse doctors by specialization, compare profiles and book your
+            appointment online in just a few clicks.
+          </p>
 
-  <div className="hero-info">
-    <div className="info-card">
-      <strong>120+</strong>
-      <span>Doctors</span>
-    </div>
+          <Link href="/doctors" className="button primary">
+            Browse Doctors
+          </Link>
+        </div>
 
-    <div className="info-card">
-      <strong>10+</strong>
-      <span>Specializations</span>
-    </div>
+        <div className="hero-info">
+          <div className="info-card">
+            <strong>120+</strong>
+            <span>Doctors</span>
+          </div>
 
-    <div className="info-card">
-      <strong>24/7</strong>
-      <span>Online Booking</span>
-    </div>
-  </div>
-</section>
+          <div className="info-card">
+            <strong>10+</strong>
+            <span>Specializations</span>
+          </div>
+
+          <div className="info-card">
+            <strong>24/7</strong>
+            <span>Online Booking</span>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
