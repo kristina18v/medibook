@@ -43,12 +43,6 @@ export default function HomePage() {
 
       <section className="hero-panel" aria-label="Featured doctors">
         <div className="featured-card">
-          <div className="doctor-stack" aria-hidden="true">
-            <span className="doctor-avatar">EC</span>
-            <span className="doctor-avatar">AR</span>
-            <span className="doctor-avatar">MS</span>
-          </div>
-
           <p className="eyebrow">Featured Doctors</p>
 
           <h2>Find the right doctor for you</h2>
